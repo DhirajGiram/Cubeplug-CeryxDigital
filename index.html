@@ -9,35 +9,48 @@
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="./style.css">
-
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="./js/jquery.custom.js"></script>
   <title>Custom plugin of Cube</title>
 </head>
 
 <body>
-  <div class="mainDiv">
 
-    <h1 class="heading"> Enter The Number To Find Cube </h1>
-    <input type="number" id="inputValue" placeholder="Enter a number " style="width: 253px;">
-    <br> <br>
-    <button id="btnCube"> Click</button>
-    <h1 id="here"></h1>
-
+  <div class="center">
+    <div class="row">
+      <h4 class="white-text">This is The Demo Plugin To Display The Cube</h4>
+      <div class="col s12 m4 offset-m4 text-center mainDiv">
+        <div class="card blue-grey darken-1">
+          <div class="card-content white-text">
+            <span class="card-title"> Demo Plugin </span>
+            <div class="row">
+              <div class="input-field col s6">
+                <input placeholder="Placeholder" id="inputValue" type="text" class="validate">
+                <label for="first_name">Enter The Number</label>
+              </div>
+            </div>
+          </div>
+          <h4 id="output" class=" white-text"></h4>
+          <div class="card-action">
+            <a id="btnCube" class="waves-effect waves-light btn">button</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="center">
+    <h5 class="white-text">This Plugin Develope By Dhiraj Giram | <a href="https://www.ceryxdigital.com/">Ceryx Digital</a> </h5>
+    <h5 class="white-text">Contact For Any Queries <a href="">Dhiraj.Kumar@ceryxdigital.com</a></h5>
   </div>
 </body>
-
-
-<script src="https://code.jquery.com/jquery-2.2.4.min.js"
-  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-<script src="./js/jquery.custom.js"></script>
-
-
 <script>
   $(document).ready(function () {
     $('#btnCube').click(function () {
-      let cube = $('#inputValue').cube();
-      let givennumber = document.getElementById("inputValue").value;
-      document.write(`the number of ${givennumber} Cube is   ${cube}`);
-      console.log(`the number of ${givennumber} Cube is   ${cube}`);
+     let cube = $('#inputValue').cube();
+     $("#output").html(cube);
+     console.log(cube);
     });
   });
 </script>
