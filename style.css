@@ -3,32 +3,46 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  background-image: url("./bg1.jpg");
+}
 .heading {
-  font-family: Impact;
+  font-family: "Times New Roman";
   margin-top: 150px;
 }
 .mainDiv {
-  width: 400px;
+  width: 100%;
   height: 300px;
   text-align: center;
   justify-content: center;
   margin: auto;
-  margin-top: 150px;
-  background-image: linear-gradient(350deg, #fff, #666, rgb(248, 207, 248));
+  display: inline-block;
 }
 .mainDiv input {
-  background-color: #fff;
+  background-color: rgb(245, 192, 192);
   margin-top: 50px;
   height: 40px;
+  width: 50px;
   border: none;
   border-radius: 8px;
 }
+.mainDiv input::placeholder {
+  /* background-color: #f1dee8; */
+  color: black;
+  border-radius: 15px 15px;
+  height: 35px;
+  text-align: center;
+}
 button {
-  background-color: skyblue;
+  background-color: rgb(250, 218, 218);
   width: 100px;
   height: 30px;
   border-radius: 8px;
+  box-shadow: 0px -1px 3px 4px rgb(226, 225, 225),
+    0px -1px 2px 4px rgb(243, 217, 161);
 }
 button:hover {
   background-color: seashell;
+  transform: translateY(-5px);
+  box-shadow: none;
 }
