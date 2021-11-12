@@ -26,7 +26,7 @@
             <span class="card-title"> Cube Plugin </span>
             <div class="row">
               <div class="input-field col s6">
-                <input placeholder="Placeholder" id="inputValue" type="text" class="validate">
+                <input placeholder="Enter The Number" id="inputValue" type="text" class="validate">
                 <label for="first_name">Enter The Number</label>
               </div>
             </div>
@@ -49,7 +49,7 @@
   $(document).ready(function () {
     $('#btnCube').click(function () {
      let cube = $('#inputValue').cube();
-     $("#output").html(cube);
+     $("#output").html(`Cube of the number is:${cube}`);
      console.log(cube);
     });
   });
